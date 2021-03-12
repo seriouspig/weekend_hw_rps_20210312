@@ -9,7 +9,7 @@ def index():
 
 @app.route('/<choice1>/<choice2>')
 def result(choice1, choice2):
-    player_1 = Player("Andy", choice1)
-    player_2 = Player("Paul", choice2)
+    player_1 = Player("Player 1", choice1)
+    player_2 = Player("Player 2", choice2)
     new_result = game_result(player_1, player_2)
     return render_template('index.html', result=new_result)

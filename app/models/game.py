@@ -5,17 +5,17 @@ def game_result(player1, player2):
         return "Draw"
     elif player1.choice == "rock":
         if player2.choice == "paper":
-            return "Player 2 wins by playing paper!"
+            return player2.name + " wins by playing " + player2.choice
         else:
-            return "Player 1 wins by playing rock!"
+            return player1.name + " wins by playing " + player1.choice
     elif player1.choice == "paper":
         if player2.choice == "rock":
-            return "Player 1 wins by playing paper!"
+            return player1.name + " wins by playing " + player1.choice
         else:
-            return "Player 2 wins rock!"
+            return player2.name + " wins by playing " + player2.choice
     elif player1.choice == "scissors":
         if player2.choice == "paper":
-            return "Player 1 wins by playing scissors!"
+            return player1.name + " wins by playing " + player1.choice
         else:
-            return "Player 2 wins by playing paper!"
+            return player2.name + " wins by playing " + player2.choice
    
