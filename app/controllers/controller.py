@@ -21,4 +21,4 @@ def gamestart():
 @app.route('/<choice1>')
 def p2choice(choice1):
     return render_template('p2choice.html')
-
+    
