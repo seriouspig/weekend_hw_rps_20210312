@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div>
+        <h2>Hello player 2</h2>
+        <h2>Please choose your weapon</h2>
+        <section> 
+            <a href="{{url_for('result', choice1=request.url_rule, choice2='rock')}}">Rock</a>
+            <a href="{{url_for('result',  choice1=request.url_rule, choice2='paper')}}">Paper</a>
+            <a href="{{url_for('result', choice1=request.url_rule, choice2='scissors')}}">Scissors</a>
+        </section>
+       
+    </div>
+
+{% endblock %}
