@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div>
+        <h2>The computer is thinking...</h2>
+        <h2>The computer has chosen {{cpu_choice}}</h2>
+        <section> 
+            <a href="{{url_for('result_cpu', choice1=(request.path[4:]), choice2=cpu_choice)}}">Continue to result</a>
+        </section>
+       
+    </div>
+
+{% endblock %}
