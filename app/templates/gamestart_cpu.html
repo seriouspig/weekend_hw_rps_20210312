@@ -6,9 +6,15 @@
         <h2>Hello {{p1name}}</h2>
         <h2>Please choose your weapon</h2>
         <section> 
-            <a href="{{url_for('p2choice_cpu', choice1_cpu='rock')}}">Rock</a>
-            <a href="{{url_for('p2choice_cpu', choice1_cpu='paper')}}">Paper</a>
-            <a href="{{url_for('p2choice_cpu', choice1_cpu='scissors')}}">Scissors</a>
+            <a href="{{url_for('p2choice_cpu', choice1_cpu='rock')}}">Rock
+                <img src="/static/images/rock.png" alt="">
+            </a>
+            <a href="{{url_for('p2choice_cpu', choice1_cpu='paper')}}">Paper
+                <img src="/static/images/paper.png" alt="">
+            </a>
+            <a href="{{url_for('p2choice_cpu', choice1_cpu='scissors')}}">Scissors
+                <img src="/static/images/scissors.png" alt="">
+            </a>
         </section>
        
     </div>
