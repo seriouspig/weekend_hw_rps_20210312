@@ -3,7 +3,7 @@
 {% block content %}
 
     <div>
-        <h2>Hello player 2</h2>
+        <h2>Hello {{p2name}}</h2>
         <h2>Please choose your weapon</h2>
         <section> 
             <a href="{{url_for('result', choice1=request.path, choice2='rock')}}">Rock</a>

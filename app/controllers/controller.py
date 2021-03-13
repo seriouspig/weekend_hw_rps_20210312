@@ -13,18 +13,20 @@ def index():
 
 @app.route('/<choice1>/<choice2>')
 def result(choice1, choice2):
-    player_1 = Player("Player 1", choice1)
-    player_2 = Player("Player 2", choice2)
+    global player_1_name
+    global player_2_name
+    player_1 = Player(player_1_name, choice1)
+    player_2 = Player(player_2_name, choice2)
     new_result = Game.game_result(player_1, player_2)
     return render_template('result.html', result=new_result)
 
 @app.route('/gamestart')
 def gamestart():
-    return render_template('gamestart.html')
+    return render_template('gamestart.html', p1name = player_1_name)
 
 @app.route('/<choice1>')
 def p2choice(choice1):
-    return render_template('p2choice.html')
+    return render_template('p2choice.html', p2name = player_2_name)
 
 @app.route('/cpu/gamestart_cpu')
 def gamestart_cpu():
@@ -54,3 +56,15 @@ def create_name_cpu():
     global player_1_name
     player_1_name = request.form['name1']
     return render_template('get_name_cpu.html')
+
+@app.route('/get_name')
+def get_name():
+    return render_template('get_name.html')
+
+@app.route('/get_name', methods=['POST'])
+def create_name():
+    global player_1_name
+    global player_2_name
+    player_1_name = request.form['name1']
+    player_2_name = request.form['name2']
+    return render_template('get_name.html')
