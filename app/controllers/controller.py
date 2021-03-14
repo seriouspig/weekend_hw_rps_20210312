@@ -17,8 +17,8 @@ def result(choice1, choice2):
     global player_2_name
     player_1 = Player(player_1_name, choice1)
     player_2 = Player(player_2_name, choice2)
-    new_result = Game.game_result(player_1, player_2)
-    return render_template('result.html', result=new_result)
+    new_result, new_winner = Game.game_result(player_1, player_2)
+    return render_template('result.html', result=new_result, winner=new_winner)
 
 @app.route('/gamestart')
 def gamestart():
@@ -44,8 +44,8 @@ def result_cpu(choice1, choice2):
     global player_1_name
     player_1 = Player(player_1_name, choice1)
     player_2 = Player("Computer", choice2)
-    new_result = Game.game_result(player_1, player_2)
-    return render_template('result_cpu.html', result=new_result)
+    new_result, new_winner = Game.game_result(player_1, player_2)
+    return render_template('result_cpu.html', result=new_result, winner=new_winner)
 
 @app.route('/get_name_cpu')
 def get_name_cpu():
