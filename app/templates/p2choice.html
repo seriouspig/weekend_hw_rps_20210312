@@ -4,15 +4,15 @@
 
     <div>
         <h2>Hello {{p2name}}</h2>
-        <h2>Please choose your weapon</h2>
+        <h2>Please choose your warrior</h2>
         <section> 
-            <a href="{{url_for('result', choice1=request.path, choice2='rock')}}">Rock
+            <a href="{{url_for('result', choice1=request.path, choice2='rock')}}">
                 <img src="/static/images/rock.png" class="mirrored" alt="">
             </a>
-            <a href="{{url_for('result',  choice1=request.path, choice2='paper')}}">Paper
+            <a href="{{url_for('result',  choice1=request.path, choice2='paper')}}">
                 <img src="/static/images/paper.png" class="mirrored" alt="">
             </a>
-            <a href="{{url_for('result', choice1=request.path, choice2='scissors')}}">Scissors
+            <a href="{{url_for('result', choice1=request.path, choice2='scissors')}}">
                 <img src="/static/images/scissors.png" class="mirrored" alt="">
             </a>
         </section>

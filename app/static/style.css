@@ -5,7 +5,13 @@ body {
     color: white;
     text-align: center;
     margin: auto;
+    
+}
 
+.wrapper {
+
+    transform: scale(0.8,0.8);
+    
 }
 
 a {
@@ -13,6 +19,15 @@ a {
     color: gray;
 
 }
+
+.title_img {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    
+}
+
     
  .mirrored {
 
@@ -21,3 +36,21 @@ a {
     filter: hue-rotate(45deg);
 
  }   
+
+ .fireworks {
+
+    height:198px;
+    width:198px;
+
+ }
+
+ .icons {
+     margin-right: 60px;
+ }
+
+ .link {
+
+    padding-top: 60px;
+    margin-top: 30px;
+
+ }
