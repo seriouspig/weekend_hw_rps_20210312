@@ -68,3 +68,7 @@ def create_name():
     player_1_name = request.form['name1']
     player_2_name = request.form['name2']
     return render_template('get_name.html')
+
+@app.route('/settings')
+def get_settings():
+    return render_template('settings.html')
